@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+      integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
+
+    <script defer src="/js/index.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <nav id="nav" class="grid">
+      <button id="open-sidebar" class="btn btn-hamburger">
+        <i class="fas fa-bars"></i>
+      </button>
+      <div id="sidebar">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Project</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <div id="navbar">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Project</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <header id="showcase" class="container">
+      <div class="content-wrap">
+        <div class="bg-image"></div>
+        <h1>
+          Hi, I'm <span class="primary-text">Lorenz</span> Lorem ipsum dolor sit
+          amet.
+        </h1>
+        <a href="#section-about" class="btn btn-read">Read More</a>
+      </div>
+    </header>
+    <main id="main" class="grid">
+      <section id="section-project">
+        <div class="content-wrap">
+          <h2 class="content-tile">Project</h2>
+          <div class="content-text">
+            <ul>
+              <li>
+                <div class="card">
+                  <img src="/img/programming.jpg" alt="" />
+                  <h3 class="card-title">TIMS</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Delectus libero totam dolorem. Molestias aspernatur, officia
+                    et incidunt delectus consequuntur autem!
+                  </p>
+                </div>
+              </li>
+              <li>
+                <div class="card">
+                  <img src="/img/programming.jpg" alt="" />
+                  <h3 class="card-title">TIMS</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Delectus libero totam dolorem. Molestias aspernatur, officia
+                    et incidunt delectus consequuntur autem!
+                  </p>
+                </div>
+              </li>
+              <li>
+                <div class="card">
+                  <img src="/img/programming.jpg" alt="" />
+                  <h3 class="card-title">TIMS</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Delectus libero totam dolorem. Molestias aspernatur, officia
+                    et incidunt delectus consequuntur autem!
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section id="section-about">
+        <div class="content-wrap">
+          <h2>Profile</h2>
+          <img src="/img/img.jpg" alt="" />
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus a
+            consectetur iusto dolorem ex id aliquam dolores molestiae. Dolorum a
+            laudantium tempora ab nobis veritatis adipisci dicta eligendi
+            temporibus, recusandae ipsum iure! Hic, magnam totam.
+          </p>
+          <h2>Skills</h2>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo alias
+            vel id, officia nam non accusamus dolor aut explicabo laudantium
+            doloribus debitis. Autem rerum soluta quod magnam tempore, excepturi
+            explicabo?
+          </p>
+          <div class="skills">
+            <div class="skill">
+              <h3 class="skill-title">HTML</h3>
+
+              <div id="html" class="skill-percent"></div>
+            </div>
+            <div class="skill">
+              <h3 class="skill-title">CSS</h3>
+              <div id="css" class="skill-percent"></div>
+            </div>
+            <div class="skill">
+              <h3 class="skill-title">JavaScript</h3>
+              <div id="javascript" class="skill-percent"></div>
+            </div>
+            <div class="skill">
+              <h3 class="skill-title">PHP</h3>
+              <div id="php" class="skill-percent"></div>
+            </div>
+            <div class="skill">
+              <h3 class="skill-title">Java</h3>
+              <div id="java" class="skill-percent"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="section-contact">
+        <div class="content-wrap">
+          <h2>Contact</h2>
+          <form id="form">
+            <input class="form-input" type="text" placeholder="Name" />
+            <input class="form-input" type="email" placeholder="Email" />
+            <textarea
+              class="form-input"
+              id="subject"
+              name="subject"
+              id=""
+              cols="10"
+              rows="10"
+            ></textarea>
+            <input type="submit" class="btn" value="Submit" />
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer id="main-footer">
+      <p>&copy;Copyright,Allright Reserved 2021</p>
+    </footer>
+  </body>
+</html>
