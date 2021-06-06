@@ -1,65 +1,39 @@
-const openSideMenu = document.getElementById('open-sidebar');
-const sidebar = document.getElementById('sidebar');
-const menuIndicator = document.querySelector('.fas');
+const openSideMenu = document.getElementById("open-sidebar");
+const sidebar = document.getElementById("sidebar");
+const menuIndicator = document.querySelector(".fas");
+
 let isOpen = true;
+const navLinks = document.querySelector(".nav-links");
 
-const skills = document.querySelectorAll('.skill');
-const skillContainer = document.querySelector('.skill-percent');
-const html = document.querySelector('#html');
-const css = document.querySelector('#css');
-const javascript = document.querySelector('#javascript');
-const php = document.querySelector('#php');
-const java = document.querySelector('#java');
-const skillProgress = (type, progress) => {
-  let lang;
-  if ((type = 'html')) lang = html;
-  if ((type = 'css')) lang = css;
-  if ((type = 'javascript')) lang = javascript;
-  if ((type = 'php')) lang = php;
-  if ((type = 'java')) lang = java;
-
-  lang.textContent = progress;
-  lang.style.width = progress;
-  lang.style.transition = 'all 1.5s';
+const sidebarStyle = (position, transition, remove) => {
+  sidebar.style.left = position;
+  sidebar.style.transition = transition;
+  menuIndicator.classList.remove("fa-bars");
+  menuIndicator.classList.add("fa-times");
+  if (remove !== "remove") {
+    menuIndicator.classList.add("fa-bars");
+    menuIndicator.classList.remove("fa-times");
+  }
 };
-openSideMenu.addEventListener('click', function (e) {
+openSideMenu.addEventListener("click", function (e) {
   if (isOpen) {
-    sidebar.style.display = 'block';
-    sidebar.style.left = 0;
-
-    menuIndicator.classList.toggle('fa-times');
-    menuIndicator.classList.toggle('fa-bars');
+    sidebarStyle(0, "all ease .5s", "remove");
   } else {
-    sidebar.style.display = 'none';
-    sidebar.style.left = -250;
-
-    menuIndicator.classList.toggle('fa-times');
-    menuIndicator.classList.toggle('fa-bars');
+    sidebarStyle("-250px", "all ease .5s");
   }
   isOpen = !isOpen;
 });
 
-/* Skills */
-skills.forEach(el => {
-  el.addEventListener('mouseenter', e => {
-    html.textContent = '60%';
-    html.style.width = '60%';
-    html.style.transition = 'all 1.5s';
+//Navigation bar
+navLinks.addEventListener("click", function (e) {
+  if (e.target.classList.contains("nav-link")) {
+    e.preventDefault();
+    sidebarStyle("-250px", "none");
+    const id = e.target.getAttribute("href");
+    document.querySelector(id).scrollIntoView({ behavior: "smooth" });
+  }
+});
 
-    css.textContent = '40%';
-    css.style.width = '40%';
-    css.style.transition = 'all 1.5s';
-
-    javascript.textContent = '50%';
-    javascript.style.width = '50%';
-    javascript.style.transition = 'all 1.5s';
-
-    php.textContent = '70%';
-    php.style.width = '70%';
-    php.style.transition = 'all 1.5s';
-
-    java.textContent = '60%';
-    java.style.width = '60%';
-    java.style.transition = 'all 1.5s';
-  });
+window.addEventListener("scroll", () => {
+  sidebarStyle("-250px", "none");
 });
