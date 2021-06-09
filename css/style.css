@@ -1,234 +1,271 @@
 * {
   margin: 0;
   padding: 0;
-  text-decoration: none;
   box-sizing: border-box;
+  text-decoration: none;
 }
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 1.2em;
+.container {
+  max-width: 1300px;
+  min-width: 500;
+  padding: 0 80px;
+  margin: auto;
 }
-img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-h2 {
-  text-align: center;
-  margin: 1em;
-}
-p {
-  font-size: 1.2em;
-}
-.primary-text {
-  color: aqua;
-}
-.btn {
-  padding: 0.5em;
-  background: #333;
-  border: none;
-}
-.fade-in {
-  opacity: 0;
-  transition: opacity 250ms ease-in;
-}
-.remove-scrolling {
-  height: 100%;
-  overflow: hidden;
-}
-#section-about,
-#section-project,
-#section-contact {
-  padding: 1em;
-}
-/* Navigation Bar */
-#nav {
-  background: #333;
-  width: 100%;
-}
-#nav #navbar {
-  display: none;
-}
-#nav #open-sidebar {
-  font-size: 1.3em;
-  margin: 0.4em;
-}
-#nav #sidebar {
-  background: #333;
-  position: fixed;
-  left: -250px;
-  width: 250px;
-  height: 100%;
-}
-#sidebar ul {
+ul {
   list-style: none;
 }
-#sidebar ul a {
-  display: block;
-  height: 100%;
-  width: 100%;
-  font-size: 20px;
-  line-height: 65px;
-  color: white;
-  padding-left: 40px;
+a {
+  text-decoration: none;
 }
-#sidebar ul li {
-  border-bottom: 1px solid #aeaeae;
-  margin: 8px;
+.sticky {
+  position: fixed;
+}
+section {
+  padding: 100px 0;
+}
+#navbar {
+  position: fixed;
+  width: 100%;
+
+  box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+  font-family: "Ubuntu", sans-serif;
+  padding: 30px 0;
+  transition: all 0.3s ease;
+}
+#navbar.sticky {
+  padding: 15px 0;
+  background: crimson;
+}
+#navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+#navbar #nav-links {
+  display: flex;
 }
 
-/* Showcase */
-#showcase {
-  height: 100vh;
+#navbar #nav-links li a {
+  margin: 30px;
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  font-weight: 500;
+  transition: color 0.3s ease;
 }
-.icons {
-  margin: 1em 1.5em;
-  display: block;
+#navbar #nav-links li a:hover {
+  color: blue;
+  font-weight: 900;
 }
-#showcase .bg-image {
-  position: absolute;
-  background: #333 url("/img/marketing.jpg");
+#navbar .logo a {
+  color: white;
+  font-size: 35px;
+  font-weight: 600;
+}
+/* menu-btn styling */
+.menu-btn {
+  color: #fff;
+  font-size: 23px;
+  cursor: pointer;
+  display: none;
+}
+/* Home Section  */
+.home {
+  display: flex;
+  justify-content: space-around;
+  background: url("/img/banner.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  width: 100%;
   height: 100vh;
-  z-index: -1;
-  opacity: 0.4;
-}
-#showcase h1 {
-  padding: 1.5em 1em;
-}
-#showcase .btn-about {
-  margin: 1em;
-}
-
-/* Section About */
-#section-about {
-  text-align: center;
-}
-#section-about img {
-  margin: 0 auto;
-  border-radius: 10px;
-  width: 50%;
-}
-#section-about p {
-  padding: 1em;
-}
-/* Section Project */
-#section-project ul {
-  list-style: none;
-}
-#section-project .card {
-  text-align: center;
-  pad: 0.5em;
-  margin: 1em 0;
-  border-radius: 10px;
-  box-shadow: 5px 5px 10px #555;
-}
-
-.card p {
-  padding: 1em;
-}
-
-/* Section Contact */
-#form {
-  text-align: center;
-  margin-bottom: 4em;
-}
-#form .form-input {
-  font-size: 1em;
-  width: 95%;
-  display: block;
-  padding: 10px;
-  margin: 1em 1.5em;
-  border: 1px solid #444;
-  border-radius: 10px;
-}
-/* #form .btn-submit {
-  width: 80%;
-  border-radius: 10px;
-  margin: 1.5em;
-} */
-/* Footer */
-#main-footer {
-  text-align: center;
   color: #fff;
-  height: 60px;
-  background: #333;
+  min-height: 500px;
+  font-family: "Ubuntu", sans-serif;
 }
-#main-footer p {
-  padding: 1em;
+.home .container {
+  width: 100%;
+  display: flex;
+}
+.home-intro {
+  transition: all 3s ease;
+}
+.home .home-content .text-1 {
+  font-size: 27px;
+}
+.home .home-content .text-2 {
+  font-size: 75px;
+  font-weight: 600;
+  margin-left: -3px;
+}
+.home .home-content .text-3 {
+  font-size: 40px;
+  margin: 5px 0;
+}
+.home .home-content .text-3 span {
+  color: crimson;
+  font-weight: 500;
+}
+/* Footer */
+footer p {
+  font-family: calibri;
+}
+footer p:nth-child(1) {
+  font-size: 30px;
+  font-weight: bold;
+  color: #191919;
+  line-height: 10px;
+}
+footer p:nth-child(2) {
+  font-size: 16px;
+  color: #7e7d7d;
+  width: 600px;
+  text-align: center;
+}
+footer {
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.social-icons a {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e6e3e3;
+  margin: 20px 10px;
+  border-radius: 50%;
+}
+.social-icons {
+  display: flex;
+}
+.social-icons i,
+.social i {
+  color: #000000;
+}
+.social-icons a:hover {
+  background-color: #000000;
+  box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+  transition: all ease 0.5s;
+}
+.social-icons a:hover i,
+.social a:hover i {
+  color: #ffffff;
+  transition: all ease 0.5s;
 }
 
-@media (min-width: 700px) {
-  .grid {
-    display: grid;
-    grid-template-columns: 1fr repeat(3, minmax(auto, 25em)) 1fr;
-  }
+.copyright {
+  color: #565555;
+  font-size: 12px;
+  position: absolute;
+  left: 50%;
+  bottom: 10px;
+  transform: translateX(-50%);
+}
+.social {
+  position: fixed;
+  top: 40%;
+  right: 0px;
+  transform: translateY-(40%);
+}
+.social a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  margin: 0px;
+  padding: 0px;
+  line-height: 0px;
+  background-color: #ffffff;
+  border: 1px solid #cbcbcb;
+  box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+}
+.social a:hover {
+  background-color: #000000;
+  transition: all ease 0.5s;
+}
+.social i {
+  font-size: 20px;
+  color: #2b2b2b;
+}
 
-  .container,
-  #section-project ul,
-  #nav #navbar {
-    grid-column: 2/5;
+/* Responsive */
+@media (max-width: 1104) {
+  .home .container {
+    padding: 0px;
   }
-  #sidebar,
-  #open-sidebar {
+}
+@media (max-width: 991) {
+  .home .container {
+    padding: 0 50px;
+  }
+}
+@media (max-width: 947px) {
+  .social {
     display: none;
   }
-  #navbar {
-    position: relative;
+  .container {
+    padding: 0 50px;
   }
-  #nav #navbar {
+  .menu-btn {
+    display: block;
+    z-index: 999;
+  }
+  .menu-btn i.active::before {
+    content: "\f00d";
+  }
+  #navbar #nav-links {
+    display: block;
+    position: fixed;
+    height: 100vh;
     width: 100%;
-    height: 60px;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    flex-direction: column;
+    left: 0;
+    top: -100%;
+    background: #333;
+    padding-top: 80px;
+    transition: all 0.3s ease;
   }
-
-  #navbar ul {
-    display: flex;
-    justify-content: space-between;
-    list-style: none;
+  #navbar #nav-links.active {
+    top: 0;
   }
-  #navbar li {
-    margin: 1em 1.5em;
+  #navbar #nav-links li a {
+    display: inline-block;
+    margin: 20px 0;
+    font-size: 25px;
   }
-  #showcase {
-    margin-top: 0;
+  .home .home-content .text-2 {
+    font-size: 70px;
   }
-  #section-project ul {
-    display: flex;
-    justify-content: space-around;
+  .home .home-content .text-3 {
+    font-size: 35px;
   }
-  #section-project li {
-    width: 31%;
+}
+@media (max-width: 690px) {
+  #navbar {
+    padding: 10px;
   }
-  #profile {
-    display: flex;
-    justify-content: center;
+  .container {
+    padding: 0 20px;
   }
-  #profile img {
-    width: 30%;
-    height: 40%;
-    margin: 1em;
+  .home .home-content .text-2 {
+    font-size: 60px;
   }
-  #profile p {
-    align-content: center;
+  .home .home-content .text-3 {
+    font-size: 30px;
   }
-  #form {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+}
+@media (max-width: 500px) {
+  .container {
+    padding: 0 5px;
   }
-  #form .form-input {
-    grid-column: 2/3;
-    font-size: 1.2em;
+  .home .home-content .text-2 {
+    font-size: 50px;
   }
-  #form .btn-submit {
-    grid-column: 2/3;
-    width: 50%;
-    border-radius: 10px;
+  .home .home-content .text-3 {
+    font-size: 20px;
   }
 }
